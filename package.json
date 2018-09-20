@@ -1,7 +1,6 @@
 {
   "name": "react-hend-congig",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "npm": "^6.4.1"
@@ -30,5 +29,11 @@
   },
   "author": "",
   "browserslist": "last 2 version",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://jackzemlyanoy@bitbucket.org/jackzemlyanoy/forcedreact.git"
+  },
+  "homepage": "https://bitbucket.org/jackzemlyanoy/forcedreact#readme",
+  "description": ""
 }
