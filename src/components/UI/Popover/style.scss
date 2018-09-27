@@ -1,0 +1,21 @@
+.Popover{
+  position: relative;
+  &--tittle{
+    background-color: greenyellow;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  &--content{
+    display: none;
+    background-color: firebrick;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &.isOpen &--content{
+    display: block;
+  }
+}

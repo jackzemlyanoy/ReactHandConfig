@@ -3,7 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "npm": "^6.4.1"
+    "@dr-kobros/react-webfont-loader": "^8.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "classnames": "^2.2.6",
+    "npm": "^6.4.1",
+    "prop-types": "^15.6.2",
+    "react-file-loader": "^1.2.3",
+    "react-fontawesome": "^1.6.1",
+    "react-input-validation": "^1.0.4",
+    "stylelint": "^9.5.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -11,29 +22,44 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "jest-react-redux": "^1.0.4",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
     "postcss-loader": "^3.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-hmr": "^0.1.1",
+    "react-jest": "^0.2.1",
+    "react-styleguidist": "^7.3.8",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^1.3.3",
     "style-loader": "^0.23.0",
-    "webpack": "^4.17.2",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
   },
   "scripts": {
-    "build": "npx webpack-dev-server"
+    "build": "npx webpack-dev-server",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "author": "",
   "browserslist": "last 2 version",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://jackzemlyanoy@bitbucket.org/jackzemlyanoy/forcedreact.git"
+    "url": "git+https://github.com/jackzemlyanoy/ReactHandConfig.git"
   },
-  "homepage": "https://bitbucket.org/jackzemlyanoy/forcedreact#readme",
+  "homepage": "https://github.com/jackzemlyanoy/ReactHandConfig#readme",
+  "bugs": {
+    "url": "https://github.com/jackzemlyanoy/ReactHandConfig/issues"
+  },
   "description": ""
 }

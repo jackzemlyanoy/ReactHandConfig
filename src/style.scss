@@ -1,1 +1,11 @@
-body{background: $color}
+@import "./assets/styles/_colors.scss";
+@import "./assets/styles/fonts";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+  background: $color
+}
+
+h1 {
+  font-family: 'Josefin Sans', cursive;
+}
