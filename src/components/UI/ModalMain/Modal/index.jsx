@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const Modal = props => {
-	let popUp = props.isShown ? {display: 'block'} : null;
+const Modal = (props) => {
+  const popUp = props.isShown ? { display: 'block' } : null;
 
-	return(
+  return (
 		<section id='modal' className='modal fade show' style={popUp}>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
@@ -26,6 +26,6 @@ const Modal = props => {
 				</div>
 			</div>
 		</section>
-	);
-}
+  );
+};
 export default Modal;

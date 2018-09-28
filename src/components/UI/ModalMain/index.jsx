@@ -1,32 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import Modal from "./Modal/index";
+import PropTypes from 'prop-types';
+import Modal from './Modal/index';
 
 class ModalMain extends React.Component {
 	static propTypes = {
-		modal: PropTypes.bool,
-		showModal: PropTypes.func,
-		closeModal: PropTypes.func,
+	  modal: PropTypes.bool,
+	  showModal: PropTypes.func,
+	  closeModal: PropTypes.func,
 	};
+
 	static defaultProps = {
-		modal: false,
+	  modal: false,
 	};
 
 	constructor(props) {
-		super(props);
+	  super(props);
 
-		this.state = { modal: false }
+	  this.state = { modal: false };
 	}
 
 	showModal() {
-		this.setState({ modal: true });
+	  this.setState({ modal: true });
 	}
 
 	closeModal() {
-		this.setState({ modal: false });
+	  this.setState({ modal: false });
 	}
+
 	render() {
-		return (
+	  return (
 			<div>
 				<button
 					onClick={this.showModal.bind(this)}
@@ -36,8 +38,8 @@ class ModalMain extends React.Component {
 				</button>
 				<Modal isShown={this.state.modal} onClose={this.closeModal.bind(this)} />
 			</div>
-				)
+	  );
 	}
 }
 
-export default ModalMain
+export default ModalMain;

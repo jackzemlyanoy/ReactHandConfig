@@ -1,48 +1,49 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import './style.scss';
+
 export default class Popover extends React.PureComponent {
 	static propTypes = {
-		isOpen: PropTypes.bool,
+	  isOpen: PropTypes.bool,
 	};
 
 	static defaultProps = {
-		isOpen: false,
-		className: '',
-		renderTittle: PropTypes.func.isRequired,
-		children: PropTypes.func.isRequired,
+	  isOpen: false,
+	  className: '',
+	  renderTittle: PropTypes.func.isRequired,
+	  children: PropTypes.func.isRequired,
 	};
 
-	constructor(props){
-		super(props);
+	constructor(props) {
+	  super(props);
 
-		this.state = {
-			isOpen: false,
-		}
+	  this.state = {
+	    isOpen: false,
+	  };
 	}
 
-	showContent = () =>{
-		this.setState({
-			isOpen: true,
-		});
+	showContent = () => {
+	  this.setState({
+	    isOpen: true,
+	  });
 	};
 
 	hideContent = () => {
-		this.setState({
-			isOpen: false,
-		});
+	  this.setState({
+	    isOpen: false,
+	  });
 	};
 
-	render(){
-		const { className, renderTitle, children } = this.props;
-		const { isOpen } = this.state;
-		const cn = classNames('Popover', className, {
-			isOpen,
-		});
+	render() {
+	  const { className, renderTitle, children } = this.props;
+	  const { isOpen } = this.state;
+	  const cn = classNames('Popover', className, {
+	    isOpen,
+	  });
 
-		return <div
+	  return <div
 				className={cn}
 				onMouseOver={this.showContent}
 				onMouseOut={this.hideContent}
@@ -51,6 +52,6 @@ export default class Popover extends React.PureComponent {
 			<div className="Popover--content">
 				{ children(this.props, this.state) }
 			</div>
-		</div>
+		</div>;
 	}
 }
