@@ -6,6 +6,6 @@
     className='btn btn-primary'>
     Show
 </button>
-<Modal />
+<Modal  />
 </div>
 ````

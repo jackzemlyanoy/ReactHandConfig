@@ -6,10 +6,11 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-	entry: './src/index.jsx',
-	output: {
-		path: path.join(process.cwd(), 'dist'),
-		filename: '[name].js',
+  mode: 'development',
+  entry: './src/index.jsx',
+  output: {
+    path: path.join(process.cwd(), 'dist'),
+    filename: '[name].js',
   },
   module: {
     rules: [{
@@ -39,7 +40,7 @@ module.exports = {
     }],
   },
   resolve: {
-      extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -50,16 +51,16 @@ module.exports = {
       title: 'Webpack Sandbox',
       filename: 'index.html',
       chunks: ['main'],
-      template: './src/assets/template/index.html',
+      template: 'src/assets/template/index.html',
       inject: true,
     }),
     new StyleLintPlugin({
-        files: 'src/**.scss'
-    })
+      files: 'src/**.scss',
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 9001,
   },
 };
