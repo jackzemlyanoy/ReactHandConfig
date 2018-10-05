@@ -2,6 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './style.scss';
+import ArticleList from '../ArticleList';
 
 class App extends React.Component {
   // render app
@@ -12,6 +13,7 @@ class App extends React.Component {
 			<h1>Hello, world!!</h1>
 			<FontAwesomeIcon icon="stroopwafel" />
 		</div>
+		<ArticleList articles = {this.props.articles} />
 	</div>
     );
   }
